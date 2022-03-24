@@ -76,8 +76,8 @@ gui:
     server-status:
       name: '&b本服状态'
     support-links:
-      name: '&b相关链接'
       # 可能翻译成“支持链接”更好？
+      name: '&b相关链接'
     premium-user:
       name: '&b用户信息'
     close-gui:

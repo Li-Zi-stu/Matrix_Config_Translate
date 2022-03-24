@@ -1,4 +1,4 @@
-# Minecraft Matrix Anti-Cheat Server Plugin Config File Translation  
+# Minecraft Matrix Anti-Cheat Server Plugin Configuration File Translation  
 Languages translated: English (original), Simplified Chinese  
 Translated version: 6.7.0  
 Reference translation: @DotRacel https://github.com/DotRacel/Matrix-Issues  

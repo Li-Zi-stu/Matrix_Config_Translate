@@ -128,7 +128,7 @@ killaura:
     10: 'matrix npc %player% 100'
     20: 'matrix notify %player% 可能正在使用战斗作弊 (杀戮光环(KillAura))'
     35: 'matrix notify %player% 正在使用战斗作弊 (杀戮光环(KillAura)) #2'
-    # 补充：也有可能是刀刀暴击（Criticals），但鄙人翻译时遵循原内容，所以未添加
+    # 补充：也有可能是刀刀暴击（Critical(s)），但鄙人翻译时遵循原内容，所以未添加
     45: 'matrix delay 5 matrix kick %player% 杀戮光环'
 
 ## 自动攻击实体（HitBox）

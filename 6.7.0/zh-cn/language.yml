@@ -1,0 +1,95 @@
+####Matrix配置-language.yml#################################################
+#
+# 你好，欢迎使用Matrix反作弊，这是language.yml，用于定义反作弊的显示的语言。
+# 您可以在此处定义反作弊显示的信息。
+#
+# -如果遇到任何问题，请到我们官方的Discord群寻求帮助：https://discord.gg/pEvY55J
+#
+# 无论如何，感谢您使用Matrix反作弊！❤
+#
+# 来自翻译者（李本伟·一世）的补充说明：鄙人对于作弊功能的翻译是在参考大多数的“外挂MOD汉化、外挂客户端汉化、魔改水影等”情况下翻译的；如有不对或更好的翻译请发邮件至：libw@libw.cc，感谢您对我翻译工作（然而大多数是机翻）的支持与信任~
+#
+###################################################################################
+
+# 您可以在此处自定义消息前缀
+prefix: '&7[&bMatrix&7]&r '
+
+# 自定义玩家被反作弊踢出后的公告信息
+kick-format: '玩家 %player% 因为作弊被踢！'
+
+# 当玩家被踢时，Matrix是否应该广播消息？
+kick-broadcast: true
+
+# Matrix检测到时应该向玩家发送什么消息
+# 玩家发送聊天消息的速度太快了？
+spam-warning: '你不能那么快地聊天或再次发送相同的内容！'
+
+# 自定义Verbose信息的格式
+#
+# 什么是“Verbose信息”？
+# 当玩家被Matrix检测到有作弊行为时，Matrix会输出调试信息显示检测信息，方便开发者调试反作弊。
+# 您可以使用“/matrix verbose”命令切换它，但通常您不需要阅读此消息，通常只需要在报告错误时使用。
+#
+# 默认: verbose-format: '&7%player% failed &2%check% &7check &8| &7%message% &b(+%add_vl%) &8| &7vl:%vl% ping:%ping% tps:%tps% lp:%lp% component: %component% ver: %version%'
+verbose-format: '&7%player% 失败的 &2%check% &7行为 &8| &7%message% &b(+%add_vl%) &8| &7等级：%vl% 延迟：%ping% 每秒刻数：%tps% 日志点：%lp% 组件： %component% 版本： %version%'
+
+# 自定义当玩家被反作弊踢出后尝试快速重新连接服务器时矩阵阻止它的消息
+relog-message: '请在重新登录前等待 %time_left% 秒！'
+
+# 全局占位符，可以在这里定义常量，可以在checks.yml中使用
+#
+# 例如，定义：
+# kick_help: "如果你认为是误报，可以联系Mod解决误报" 然后可以在checks.yml中使用%gp_kick_help%，会自动替换成这句话
+#
+global_placeholder: { }
+
+# 自定义命令说明
+commands:
+  verbose: '显示/隐藏矩阵详细消息'
+  notify: '向所有在线管理员发送消息'
+  toggle-notify: '开关通知消息输出'
+  # 杀戮光环（KillAura）、假人（NPC）
+  npc: '在玩家身后生成一个检测杀戮光环的假人'
+  kick: '踢出玩家'
+  msg: '向玩家发送警告消息'
+  gui: '打开控制面板'
+  violations: '打开违规玩家界面'
+  ping: '获取玩家延迟'
+  # 每秒点击次数（CPS）
+  cps: '监控玩家每秒点击次数'
+  reload: '重新加载配置'
+
+gui:
+  main:
+    toggle-checks:
+      name: '&a功能开关'
+      description: '&7点击打开功能开关界面'
+    show-violations:
+      name: '&a违规玩家'
+      description: '&7点击打开违规玩家页面'
+    toggle-verbose:
+      name: '&a详细信息'
+      description: '&7单击以启用/禁用详细消息'
+    reload-matrix:
+      name: '&c重载矩阵'
+      description: '&7点击重新加载插件'
+    server-status:
+      name: '&b本服状态'
+    support-links:
+      name: '&b相关链接'
+      # 可能翻译成“支持链接”更好？
+    premium-user:
+      name: '&b用户信息'
+    close-gui:
+      name: '&c关闭面板'
+
+misc:
+  update:
+    start-checking: '开始检查更新......'
+    updater: '§a> 矩阵更新器：'
+    has-update: '§c矩阵有新版本更新： §f%latest%  §c当前版本： §2%current%'
+    latest: '§a您正在使用最新版本的矩阵反作弊 <3'
+    download-link: '§c下载链接'
+  premium:
+    pass: '高级版验证已通过！'
+    expire-time: '过期时间： %time%'

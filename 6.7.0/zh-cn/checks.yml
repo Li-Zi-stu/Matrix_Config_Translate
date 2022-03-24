@@ -98,7 +98,7 @@ killaura:
       # 启用此模块？
       enable: true
 
-      # 玩家被这个模块标记后应该得到多少违规级别（VL）？
+      # 玩家被这个模块标记后应该得到多少违规等级（VL）？
       vl_weight: 5
 
     # 扫射检查
@@ -115,9 +115,9 @@ killaura:
           - 'ka.abt.magic'
           - 'hb.reach'
           - 'hb.reach'
-        action: 5 # +5违规级别（VL）
+        action: 5 # +5违规等级（VL）
 
-  # 自定义违规级别（VL）衰减间隔（秒）和违规级别（VL）衰减大小
+  # 自定义违规等级（VL）衰减间隔（秒）和违规等级（VL）衰减大小
   decay:
     interval: 15
     amount: 5
@@ -159,11 +159,11 @@ hitbox:
     reach_target_standing: 10
     reach_target_moving: 3
 
-  # 是否应启用动态违规级别（VL）权重？
-  # 如果开启，违规级别（VL）权重会根据玩家的范围来计算
-  # 例如玩家使用3.2范围时获得1违规级别（VL），玩家使用5.0范围时获得19违规级别（VL）
+  # 是否应启用动态违规等级（VL）权重？
+  # 如果开启，违规等级（VL）权重会根据玩家的范围来计算
+  # 例如玩家使用3.2范围时获得1违规等级（VL），玩家使用5.0范围时获得19违规等级（VL）
   # 如果启用此功能，则“reach_target_standing”和“reach_target_moving”将不再生效
-  # 注意：动态违规级别（VL）=（当前范围-最大范围）*扩展器
+  # 注意：动态违规等级（VL）=（当前范围-最大范围）*扩展器
   # Note: dynamic VL = (current_reach - max_reach) * expander
   dynamic_vl:
     enable: true
@@ -171,12 +171,12 @@ hitbox:
     min_vl: 3
     max_vl: 8
 
-  # 短时间内违规级别（VL）的最大增加是多少？
+  # 短时间内违规等级（VL）的最大增加是多少？
   # 由于网络连接不稳定，自动攻击实体（HitBox）检测可能会在出现高延迟时导致误报
-  # 此选项限制违规级别（VL）在“5秒”内的最大增加
+  # 此选项限制违规等级（VL）在“5秒”内的最大增加
   max_burst_vl: 15
 
-  # 自定义违规级别（VL）衰减间隔（秒）和违规级别（VL）衰减大小
+  # 自定义违规等级（VL）衰减间隔（秒）和违规等级（VL）衰减大小
   decay:
     interval: 15
     amount: 5
@@ -203,14 +203,14 @@ click:
   check_swing: true
   check_timing: true
 
-  # 检测到每秒点击次数（CPS）过高时，是否根据每秒点击次数（CPS）动态调整违规级别（VL）权重？
-  # 这意味着玩家的每秒点击次数（CPS）越高，检测到作弊时获得的违规级别（VL）越高
+  # 检测到每秒点击次数（CPS）过高时，是否根据每秒点击次数（CPS）动态调整违规等级（VL）权重？
+  # 这意味着玩家的每秒点击次数（CPS）越高，检测到作弊时获得的违规等级（VL）越高
   dynamic_cps_vl_weight: true
 
   # 单击间隔缓冲区大小（请勿修改！！！）
   buffer_size: 20
 
-  # 自定义违规级别（VL）衰减间隔（秒）和违规级别（VL）衰减大小
+  # 自定义违规等级（VL）衰减间隔（秒）和违规等级（VL）衰减大小
   decay:
     interval: 15
     amount: 5
@@ -231,7 +231,7 @@ move:
   # Matrix是否应该阻止NoSlow作弊？
   check_noslow: true
 
-  # 当玩家达到这个违规级别（VL）时，开始拉回玩家的异常动作
+  # 当玩家达到这个违规等级（VL）时，开始拉回玩家的异常动作
   cancel_vl: 35
 
   # 当玩家被拉回时，Matrix是否应该对玩家施加伤害？
@@ -249,7 +249,7 @@ move:
   # 这可能会导致某些“PvP客户端”的飞行能力受到限制
   check_flying_players: false
 
-  # 如果Matrix认为玩家一定是作弊，Matrix会忽略当前的违规级别（VL），直接拉回玩家。
+  # 如果Matrix认为玩家一定是作弊，Matrix会忽略当前的违规等级（VL），直接拉回玩家。
   # 但这不是100%准确的，因此您可以选择矩阵应该强制玩家拉回的情况
   force_setback_situations:
     high_jump: true
@@ -262,7 +262,7 @@ move:
   # 如果玩家在虚空中作弊，Matrix是否应该将玩家传送到虚空中？
   allow_setback_to_void: true
 
-  # 自定义违规级别（VL）衰减间隔（秒）和违规级别（VL）衰减大小
+  # 自定义违规等级（VL）衰减间隔（秒）和违规等级（VL）衰减大小
   decay:
     interval: 10
     amount: 45
@@ -294,7 +294,7 @@ badpackets:
     # accelerate the growth of the balance, so that the timer can be detected faster
     accelerate_timer_check: true
 
-  # 自定义违规级别（VL）衰减间隔（秒）和违规级别（VL）衰减大小
+  # 自定义违规等级（VL）衰减间隔（秒）和违规等级（VL）衰减大小
   decay:
     interval: 15
     amount: 25
@@ -316,7 +316,7 @@ delay:
   cancel_action: true
 
   # 模块列表
-  # 您可以定义每个模块的违规级别（VL）权重，-1等于禁用它
+  # 您可以定义每个模块的违规等级（VL）权重，-1等于禁用它
   check_healing: 1
   check_using_items: 1
   check_using_bow: 1
@@ -325,7 +325,7 @@ delay:
   check_auto_totem: 1
   check_fast_throw: 1
 
-  # 自定义违规级别（VL）衰减间隔（秒）和违规级别（VL）衰减大小
+  # 自定义违规等级（VL）衰减间隔（秒）和违规等级（VL）衰减大小
   decay:
     interval: 15
     amount: 2
@@ -367,7 +367,7 @@ block:
       enable: true
       vl_weight: 0
 
-  # 自定义违规级别（VL）衰减间隔（秒）和违规级别（VL）衰减大小
+  # 自定义违规等级（VL）衰减间隔（秒）和违规等级（VL）衰减大小
   decay:
     interval: 15
     amount: 8
@@ -384,7 +384,7 @@ scaffold:
   # 启用此检查
   enable: true
 
-  # 取消违规级别（VL）
+  # 取消违规等级（VL）
   cancel_vl: 15
 
   # 模块
@@ -412,7 +412,7 @@ scaffold:
       enable: true
       vl_weight: 2
 
-  # 自定义违规级别（VL）衰减间隔（秒）和违规级别（VL）衰减大小
+  # 自定义违规等级（VL）衰减间隔（秒）和违规等级（VL）衰减大小
   decay:
     interval: 15
     amount: 6
@@ -437,7 +437,7 @@ jesus:
   # 此功能可以防止游泳状态不同步
   ignore_swim_pose: false
 
-  # 自定义违规级别（VL）衰减间隔（秒）和违规级别（VL）衰减大小
+  # 自定义违规等级（VL）衰减间隔（秒）和违规等级（VL）衰减大小
   decay:
     interval: 10
     amount: 10
@@ -462,13 +462,13 @@ velocity:
   # 忽略延迟玩家，该功能可以忽略掉延迟或更换资源包的玩家。
   ignore_lag: true
 
-  # 速度检查模块的违规级别（VL）（-1=禁用）
+  # 速度检查模块的违规等级（VL）（-1=禁用）
   modules:
     respond: 5
     analyser: 3
     vertical: 1
 
-  # 自定义违规级别（VL）衰减间隔（秒）和违规级别（VL）衰减大小
+  # 自定义违规等级（VL）衰减间隔（秒）和违规等级（VL）衰减大小
   decay:
     interval: 15
     amount: 3
@@ -492,7 +492,7 @@ chat:
   # 取消已发送消息所需的违规行为（-1=从不取消）
   cancel_vl: 3
 
-  # 自定义违规级别（VL）衰减间隔（秒）和违规级别（VL）衰减大小
+  # 自定义违规等级（VL）衰减间隔（秒）和违规等级（VL）衰减大小
   decay:
     interval: 30
     amount: 5
@@ -512,7 +512,7 @@ interact:
   check_interact_block: true
   check_attack: true
 
-  # 自定义违规级别（VL）衰减间隔（秒）和违规级别（VL）衰减大小
+  # 自定义违规等级（VL）衰减间隔（秒）和违规等级（VL）衰减大小
   decay:
     interval: 10
     amount: 5
@@ -532,7 +532,7 @@ phase:
   # 如果玩家频繁尝试移动方块，Matrix应该在多长时间内阻止玩家移动？（毫秒）
   freeze_time: 400
 
-  # 取消非法移动所需的违规级别（VL）
+  # 取消非法移动所需的违规等级（VL）
   cancel_vl: 5
 
   # Matrix是否应该阻止玩家使用末影珍珠进行近距离传送？
@@ -541,7 +541,7 @@ phase:
   # 排除方块类型
   exclude_types: []
 
-  # 自定义违规级别（VL）衰减间隔（秒）和违规级别（VL）衰减大小
+  # 自定义违规等级（VL）衰减间隔（秒）和违规等级（VL）衰减大小
   decay:
     interval: 15
     amount: 10
@@ -559,7 +559,7 @@ autobot:
   # 启用此检查？
   enable: true
 
-  # 自定义违规级别（VL）衰减间隔（秒）和违规级别（VL）衰减大小
+  # 自定义违规等级（VL）衰减间隔（秒）和违规等级（VL）衰减大小
   decay:
     interval: 15
     amount: 2
@@ -582,14 +582,14 @@ elytra:
   # 即使他们没有达到cancel_vl（默认值：true）
   force_setback: true
 
-  # 拉回违规级别（VL）（-1=从不拉回）
+  # 拉回违规等级（VL）（-1=从不拉回）
   setback_vl: 5
 
-  # 解除鞘翅违规级别（VL）
-  # 如果玩家达到此违规级别（VL），Matrix将使其脱离滑翔状态（-1=禁用此功能）
+  # 解除鞘翅违规等级（VL）
+  # 如果玩家达到此违规等级（VL），Matrix将使其脱离滑翔状态（-1=禁用此功能）
   unequip_vl: 20
 
-  # 自定义违规级别（VL）衰减间隔（秒）和违规级别（VL）衰减大小
+  # 自定义违规等级（VL）衰减间隔（秒）和违规等级（VL）衰减大小
   decay:
     interval: 15
     amount: 7
@@ -618,7 +618,7 @@ vehicle:
     # 启用此模块？
     enable: true
 
-    # 拉回违规级别（VL）（-1=禁用拉回）
+    # 拉回违规等级（VL）（-1=禁用拉回）
     setback_vl: 2
 
   # 载具飞行/船飞行
@@ -626,13 +626,13 @@ vehicle:
     # 启用此模块？
     enable: true
 
-    # 拉回违规级别（VL）（-1=禁用拉回）
+    # 拉回违规等级（VL）（-1=禁用拉回）
     setback_vl: 4
 
-    # 离开载具违规级别（VL）（-1=从不离开载具）
+    # 离开载具违规等级（VL）（-1=从不离开载具）
     leave_vehicle: 10
 
-  # 自定义违规级别（VL）衰减间隔（秒）和违规级别（VL）衰减大小
+  # 自定义违规等级（VL）衰减间隔（秒）和违规等级（VL）衰减大小
   decay:
     interval: 15
     amount: 5
